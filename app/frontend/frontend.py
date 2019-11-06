@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect, url_for
 from .forms import EditPageForm
 
 
@@ -16,8 +16,8 @@ def edit():
     form = EditPageForm()
 
     if form.validate_on_submit():
-        print(request.form)
-        return redirect('/success')
+        print(request.form['content'])
+        return redirect(url_for('frontend_bp.index'))
 
     else:
         return render_template("edit.html", form=form)

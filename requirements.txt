@@ -3,3 +3,4 @@ flask-misaka
 black
 pytest
 flask-wtf
+flask-sqlalchemy
