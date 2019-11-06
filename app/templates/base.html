@@ -11,8 +11,10 @@
 <body>
   {% include '_header.html' %}
 
-  {% block content %}
-  {% endblock %}
+  <div class="container ui">
+    {% block content %}
+    {% endblock %}
+  </div>
 
   {% include '_footer.html' %}
   {% include '_scripts.html' %}

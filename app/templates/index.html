@@ -1,8 +1,4 @@
-{% extends 'base.html' %} 
-
-{% block content %} 
-  <h1>EvenSimplerWiki</h1>
-  
-  {{ text | markdown }}
-
+{% extends 'base.html' %} {% block content %}
+{{ text | markdown }}
+<a href="{{ url_for('frontend_bp.edit') }}">Edit this page</a>
 {% endblock %}

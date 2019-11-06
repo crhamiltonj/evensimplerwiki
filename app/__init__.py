@@ -6,6 +6,7 @@ misaka = Misaka()
 
 def create_app():
     app = Flask(__name__)
+    app.config['SECRET_KEY'] = 'abc123'
     
     misaka.init_app(app)
 
@@ -13,4 +14,5 @@ def create_app():
         from app.frontend.frontend import frontend_bp
 
         app.register_blueprint(frontend_bp)
+
     return app
